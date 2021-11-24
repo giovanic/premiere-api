@@ -3,7 +3,4 @@ class ApiVersionConstraint
         @version = options[:version]
         @default = options[:default]     
     end
-
-
-
 end
