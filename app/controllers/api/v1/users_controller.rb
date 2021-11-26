@@ -1,10 +1,15 @@
 class Api::V1::UsersController < ApplicationController
     respond_to :json
 
+    def index
+        @users = User.all.order(:id)
+        render json: @users
+    end
+
     def show
         begin
             @user = User.find(params[:id])
-            respond_with @user
+            render json: @user
         rescue
             head 404
         end
