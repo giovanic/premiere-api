@@ -5,5 +5,6 @@ json.array! @customers do |customer|
     json.expire_at customer.expire_at
     json.sex customer.sex
     json.cpf customer.cpf
+    json.code customer.code
     json.status customer.status
 end

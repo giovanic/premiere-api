@@ -7,6 +7,7 @@ class CreateCustomers < ActiveRecord::Migration[6.1]
       t.integer :sex
       t.string :cpf
       t.boolean :status
+      t.integer :code
       t.references :user, null: false, foreign_key: true
 
       t.timestamps
